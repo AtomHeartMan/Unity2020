@@ -54,43 +54,39 @@
      <Compile Include="Assets\_Scripts\SpawnManager.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\SpinCamera.cs" />
-     <Compile Include="Assets\Challenge 4\Scripts\RotateCameraX.cs" />
-     <Compile Include="Assets\Challenge 4\Scripts\SpawnManagerX.cs" />
-     <Compile Include="Assets\Challenge 4\Scripts\EnemyX.cs" />
-     <Compile Include="Assets\Challenge 4\Scripts\PlayerControllerX.cs" />
      <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VisualStudio.Editor">
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.0b15/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -282,16 +278,13 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.0b15/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/Albert/Desktop/Unity 2020/04Sumo de bolas/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/Albert/Desktop/Unity 2020/Unity2020/Unity2020/04Sumo de bolas/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.0b15/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
