@@ -7,6 +7,7 @@ public class PlayerControllerX : MonoBehaviour
     public bool gameOver;
 
     public float floatForce;
+    public float yLimit =17;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
 
@@ -31,9 +32,15 @@ public class PlayerControllerX : MonoBehaviour
     void Update()
     {
         // While space is pressed and player is low enough, float up
-        if (Input.GetKey(KeyCode.Space) && !gameOver)
+        if (Input.GetKeyDown(KeyCode.Space) && !gameOver)
         {
             playerRb.AddForce(Vector3.up * floatForce);
+            /* Si el jugador se va a salir por la parte superior de la pantalla se le aplica una fuera
+            igual a la mitad de floatForce hacia abajo para mantenerlo en la zona de juego */
+            if (transform.position.y >= yLimit)
+            {
+                playerRb.AddForce(Vector3.down * floatForce / 2);
+            }
         }
     }
 

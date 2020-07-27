@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{d8d26737-719f-f105-2a4d-4b8c5dc42018}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.HighDefinition.Config.Runtime", "Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj", "{23cf3f8e-a747-fd7a-fcb9-3ddff1f38bf7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{d8d26737-719f-f105-2a4d-4b8c5dc42018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d8d26737-719f-f105-2a4d-4b8c5dc42018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{d8d26737-719f-f105-2a4d-4b8c5dc42018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23cf3f8e-a747-fd7a-fcb9-3ddff1f38bf7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23cf3f8e-a747-fd7a-fcb9-3ddff1f38bf7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23cf3f8e-a747-fd7a-fcb9-3ddff1f38bf7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23cf3f8e-a747-fd7a-fcb9-3ddff1f38bf7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

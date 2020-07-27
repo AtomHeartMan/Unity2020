@@ -1,17 +1,21 @@
 {
   "dependencies": {
     "com.unity.ads": {
-      "version": "2.0.8",
+      "version": "3.4.7",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.analytics": {
-      "version": "3.2.2",
+      "version": "3.3.5",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
@@ -52,7 +56,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.purchasing": {
-      "version": "2.0.3",
+      "version": "2.0.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
