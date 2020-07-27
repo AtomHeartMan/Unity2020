@@ -7,7 +7,8 @@ public class PlayerControllerX : MonoBehaviour
     public bool gameOver;
 
     public float floatForce;
-    public float yLimit =17;
+    public float yLimit = 17f;
+    public float floatLimiter = 3f;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
 
@@ -22,6 +23,7 @@ public class PlayerControllerX : MonoBehaviour
     {
         Physics.gravity *= gravityModifier;
         playerAudio = GetComponent<AudioSource>();
+        playerRb = GetComponent<Rigidbody>();
 
         // Apply a small upward force at the start of the game
         playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
@@ -36,10 +38,10 @@ public class PlayerControllerX : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * floatForce);
             /* Si el jugador se va a salir por la parte superior de la pantalla se le aplica una fuera
-            igual a la mitad de floatForce hacia abajo para mantenerlo en la zona de juego */
+            hacia abajo para mantenerlo en la zona de juego */
             if (transform.position.y >= yLimit)
             {
-                playerRb.AddForce(Vector3.down * floatForce / 2);
+                playerRb.AddForce(Vector3.down * (floatForce / floatLimiter));
             }
         }
     }
