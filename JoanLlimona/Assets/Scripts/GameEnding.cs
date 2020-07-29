@@ -2,16 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnding : MonoBehaviour
 {
     public float fadeDuration = 1f;
     public float displayTimeDuration = 1f;
     private bool isPlayerAtExit;
-    
+    private bool isPlayerCaught;
+
     public GameObject player;
 
     public CanvasGroup exitBackgroundImageCanvasGroup;
+    public CanvasGroup caughtBackgroundImageCanvasGroup;
+    
     private float timer;
     
     private void OnTriggerEnter(Collider other)
@@ -26,22 +30,38 @@ public class GameEnding : MonoBehaviour
     {
         if (isPlayerAtExit)
         {
-            timer += Time.deltaTime;
-            exitBackgroundImageCanvasGroup.alpha = Mathf.Clamp(timer / fadeDuration, 0, 1);
+           EndLevel(exitBackgroundImageCanvasGroup, false); 
         }
-
-        if (timer > fadeDuration +displayTimeDuration)
+        else if (isPlayerCaught)
         {
-            EndLevel();
+            EndLevel(caughtBackgroundImageCanvasGroup, true);
         }
     }
 
     /// <summary>
-    /// Desvanece el Canvas Group y finaliza el juego
+    /// Lanza la imagen de fin de la partida
     /// </summary>
-    void EndLevel()
+    /// <param name="imageCanvasGroup"> Imagen de fin de partida correspondiente</param>
+    void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart)
     {
-        Debug.Log("Yes.");
-        Application.Quit();
+        timer += Time.deltaTime;
+        imageCanvasGroup.alpha = Mathf.Clamp(timer / fadeDuration, 0, 1);
+
+        if (timer > fadeDuration + displayTimeDuration)
+        {
+            if (doRestart)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            else
+            {
+                Debug.Log("Yes.");
+                Application.Quit();
+            }
+        }
+    }
+    public void CatchPlayer()
+    {
+        isPlayerCaught = true;
     }
 }
