@@ -8,13 +8,15 @@ public class GameEnding : MonoBehaviour
 {
     public float fadeDuration = 1f;
     public float displayTimeDuration = 1f;
-    private bool isPlayerAtExit;
-    private bool isPlayerCaught;
+    private bool isPlayerAtExit, isPlayerCaught;
 
     public GameObject player;
 
     public CanvasGroup exitBackgroundImageCanvasGroup;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
+
+    public AudioSource exitAudio, caughtAudio;
+    private bool hasAudioPlayed;
     
     private float timer;
     
@@ -30,11 +32,11 @@ public class GameEnding : MonoBehaviour
     {
         if (isPlayerAtExit)
         {
-           EndLevel(exitBackgroundImageCanvasGroup, false); 
+           EndLevel(exitBackgroundImageCanvasGroup, false, exitAudio); 
         }
         else if (isPlayerCaught)
         {
-            EndLevel(caughtBackgroundImageCanvasGroup, true);
+            EndLevel(caughtBackgroundImageCanvasGroup, true, caughtAudio);
         }
     }
 
@@ -42,13 +44,19 @@ public class GameEnding : MonoBehaviour
     /// Lanza la imagen de fin de la partida
     /// </summary>
     /// <param name="imageCanvasGroup"> Imagen de fin de partida correspondiente</param>
-    void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart)
+    void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
+        if (!hasAudioPlayed)
+        {
+            audioSource.Play();
+            hasAudioPlayed = true;
+        }
         timer += Time.deltaTime;
         imageCanvasGroup.alpha = Mathf.Clamp(timer / fadeDuration, 0, 1);
 
         if (timer > fadeDuration + displayTimeDuration)
         {
+            
             if (doRestart)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
