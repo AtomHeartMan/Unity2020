@@ -8,20 +8,18 @@ public class PlayerControllerX : MonoBehaviour
 
     public float floatForce;
     public float yLimit = 17f;
-    public float floatLimiter = 3f;
-    private float gravityModifier = 1.5f;
+    private bool isBalloonOnLimit;
     private Rigidbody playerRb;
 
     public ParticleSystem explosionParticle, fireworksParticle;
 
     private AudioSource playerAudio;
-    public AudioClip moneySound, explodeSound;
+    public AudioClip moneySound, explodeSound, bounceSound;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Physics.gravity *= gravityModifier;
         playerAudio = GetComponent<AudioSource>();
         playerRb = GetComponent<Rigidbody>();
 
@@ -33,16 +31,18 @@ public class PlayerControllerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // While space is pressed and player is low enough, float up
-        if (Input.GetKeyDown(KeyCode.Space) && !gameOver)
+        if (transform.position.y > yLimit)
         {
-            playerRb.AddForce(Vector3.up * floatForce);
-            /* Si el jugador se va a salir por la parte superior de la pantalla se le aplica una fuera
-            hacia abajo para mantenerlo en la zona de juego */
-            if (transform.position.y >= yLimit)
-            {
-                playerRb.AddForce(Vector3.down * (floatForce / floatLimiter));
-            }
+            isBalloonOnLimit = false;
+        }
+        else
+        {
+            isBalloonOnLimit = true;
+        }
+        // While space is pressed and player is low enough, float up
+        if (Input.GetKeyDown(KeyCode.Space) && isBalloonOnLimit && !gameOver)
+        {
+            playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
         }
     }
 
@@ -65,6 +65,10 @@ public class PlayerControllerX : MonoBehaviour
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
 
+        }else if (other.gameObject.CompareTag("Ground") && !gameOver)
+        {
+            playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
+            playerAudio.PlayOneShot(bounceSound, 1.5f);
         }
 
     }
